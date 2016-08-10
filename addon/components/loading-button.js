@@ -38,7 +38,8 @@ export default Component.extend(positionalParamsMixin, {
             });
             var params = getWithDefault(this, 'params', []);
 
-            this.attrs.clicked(params).finally(() => {
+            //coerce the returned value into an RSVP promise object to ensure it has a .finally() method
+            Ember.RSVP.resolve(this.attrs.clicked(params)).finally(() => {
                 if (!this.isDestroyed) {
                     set(this, 'isSpinning', false);
                 }
