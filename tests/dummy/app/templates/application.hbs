@@ -1,3 +1,12 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<p>
+    {{#loading-button clicked=(action "clickWithPromise")}}
+        With Promise
+    {{/loading-button}}
+</p>
+<p>
+    {{#loading-button clicked=(action "clickWithoutPromise")}}
+        Without Promise
+    {{/loading-button}}
+</p>
