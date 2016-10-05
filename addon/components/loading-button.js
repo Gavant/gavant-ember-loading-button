@@ -18,10 +18,9 @@ export default Component.extend(positionalParamsMixin, {
     targetObject: computed.alias('parentView.controller') ? computed.alias('parentView.controller') : computed.alias('parentView'),
     tagName: 'button',
     classNames: ['spinner-button', 'btn'],
-    classNameBindings: ['isSpinning', 'buttonStyle'],
+    classNameBindings: ['isSpinning'],
     attributeBindings: ['disabled', 'title'],
     isSpinning: false,
-    buttonStyle: 'btn-primary',
 
     style: computed('width', function() {
         let width = get(this, 'width'),
