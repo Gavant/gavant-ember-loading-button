@@ -17,10 +17,11 @@ export default Component.extend(positionalParamsMixin, {
     layout: layout,
     targetObject: computed.alias('parentView.controller') ? computed.alias('parentView.controller') : computed.alias('parentView'),
     tagName: 'button',
-    classNames: ['spinner-button', 'btn', 'btn-primary'],
-    classNameBindings: ['isSpinning'],
+    classNames: ['spinner-button', 'btn'],
+    classNameBindings: ['isSpinning', 'buttonStyle'],
     attributeBindings: ['disabled', 'title'],
     isSpinning: false,
+    buttonStyle: 'btn-primary',
 
     style: computed('width', function() {
         let width = get(this, 'width'),
