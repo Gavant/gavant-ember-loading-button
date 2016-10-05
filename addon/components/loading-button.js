@@ -17,7 +17,7 @@ export default Component.extend(positionalParamsMixin, {
     layout: layout,
     targetObject: computed.alias('parentView.controller') ? computed.alias('parentView.controller') : computed.alias('parentView'),
     tagName: 'button',
-    classNames: ['spinner-button', 'btn', 'btn-primary'],
+    classNames: ['spinner-button', 'btn'],
     classNameBindings: ['isSpinning'],
     attributeBindings: ['disabled', 'title'],
     isSpinning: false,
