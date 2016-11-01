@@ -22,9 +22,13 @@ export default Component.extend(positionalParamsMixin, {
     attributeBindings: ['disabled', 'title'],
     isSpinning: false,
 
-    style: computed('width', function() {
+    style: computed('width', 'isSpinning', function() {
+        //only set a hard width when the spinner is shown so that the button naturally determines
+        //its width based on its content/container width when in the non spinning state
+        //this is mainly is for block-level buttons (.btn-block), whose width can dynamically change in RWD situations
         let width = get(this, 'width'),
-            string = "width:" + width + "px;";
+            string = get(this, 'isSpinning') ? "width:" + width + "px;" : "";
+
         return Ember.String.htmlSafe(string);
     }),
 
