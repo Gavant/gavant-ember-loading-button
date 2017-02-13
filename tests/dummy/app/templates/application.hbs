@@ -22,7 +22,22 @@
     </p>
     <p>
         {{#loading-button clicked=(action "clickWithoutPromise") class="btn-lg btn-default"}}
-            Without Promise
+            Without Promise (lg)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithoutPromise") class="btn-default"}}
+            Without Promise (default)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithoutPromise") class="btn-sm btn-default"}}
+            Without Promise (sm)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithoutPromise") class="btn-xs btn-default"}}
+            Without Promise (xs)
         {{/loading-button}}
     </p>
     <div class="row">

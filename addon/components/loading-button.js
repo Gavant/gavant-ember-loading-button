@@ -62,15 +62,11 @@ export default Component.extend(positionalParamsMixin, {
 
             set(this, 'showResultTimer', showResultTimer);
 
-            //send an action when a result state finishes animating in
+            //if the returned promise resolves to a function, invoke it when a result state finishes animating in
             //e.g. so the parent controller can transition once the success state is shown
             if(typeof animateInCallback === 'function') {
                 later(this, animateInCallback, get(this, `${type}AnimateInDuration`));
             }
-
-            // if(canInvoke(this.attrs, `on${capitalize(type)}AnimateIn`)) {
-            //     later(this.attrs, `on${capitalize(type)}AnimateIn`, get(this, `${type}AnimateInDuration`));
-            // }
         }
     },
 

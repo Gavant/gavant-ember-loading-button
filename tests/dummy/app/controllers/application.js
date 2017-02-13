@@ -1,11 +1,20 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    onSuccessAnimateIn() {
+        //execute some logic here that occurs after the success state is shown
+        //such as transitioning to another page
+    },
+
+    onErrorAnimateIn() {
+        //execute some logic here that occurs after the error state is shown
+    },
+
     actions: {
         clickWithPromise() {
             return new Ember.RSVP.Promise((resolve) => {
                 Ember.run.later(this, () => {
-                    resolve(Ember.run.bind(this, this.nonAnonFunc));
+                    resolve(Ember.run.bind(this, 'onSuccessAnimateIn'));
                 }, 1000);
             });
         },
@@ -13,19 +22,13 @@ export default Ember.Controller.extend({
         clickWithRejectedPromise() {
             return new Ember.RSVP.Promise((resolve, reject) => {
                 Ember.run.later(this, () => {
-                    reject(function() {
-                        console.log('error animated in!');
-                    });
+                    reject(Ember.run.bind(this, 'onErrorAnimateIn'));
                 }, 1000);
             });
         },
 
         clickWithoutPromise() {
             return true;
-        },
-
-        nonAnonFunc(foo) {
-            console.log('some func on the controller!', foo);
         }
     }
 });
