@@ -1,6 +1,10 @@
 <div class="fixed-width" style={{style}}>
     {{#if isSpinning}}
-        <span class="loading active"></span>
+        <span class="{{loadingClass}} active"></span>
+    {{else if successShown}}
+        <div class="success loading-btn-flip-in">
+            <i class={{successIcon}}></i>
+        </div>
     {{else}}
         {{yield}}
     {{/if}}

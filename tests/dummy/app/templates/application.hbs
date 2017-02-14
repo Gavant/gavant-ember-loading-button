@@ -1,13 +1,43 @@
 <div class="container">
     <h2 id="title">Welcome to Ember</h2>
     <p>
-        {{#loading-button clicked=(action "clickWithPromise") class="btn-primary"}}
+        {{#loading-button clicked=(action "clickWithPromise") class="btn-lg btn-success"}}
             With Promise
         {{/loading-button}}
     </p>
     <p>
+        {{#loading-button clicked=(action "clickWithRejectedPromise") class="btn-lg btn-danger"}}
+            With Rejected Promise
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithPromise") showSuccess=false class="btn-success"}}
+            With Promise (no success)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithRejectedPromise") showError=false class="btn-danger"}}
+            With Rejected Promise (no error)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithoutPromise") class="btn-lg btn-default"}}
+            Without Promise (lg)
+        {{/loading-button}}
+    </p>
+    <p>
         {{#loading-button clicked=(action "clickWithoutPromise") class="btn-default"}}
-            Without Promise
+            Without Promise (default)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithoutPromise") class="btn-sm btn-default"}}
+            Without Promise (sm)
+        {{/loading-button}}
+    </p>
+    <p>
+        {{#loading-button clicked=(action "clickWithoutPromise") class="btn-xs btn-default"}}
+            Without Promise (xs)
         {{/loading-button}}
     </p>
     <div class="row">
