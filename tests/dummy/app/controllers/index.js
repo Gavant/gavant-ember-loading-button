@@ -29,6 +29,10 @@ export default Ember.Controller.extend({
 
         clickWithoutPromise() {
             return true;
+        },
+
+        clickWithInstantRejectedPromise() {
+            return Ember.RSVP.reject();
         }
     }
 });

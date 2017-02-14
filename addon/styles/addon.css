@@ -110,67 +110,67 @@
 }
 
 @-webkit-keyframes loadingBtnError {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+    0%,100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
+    25%,75% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
 
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
-  }
+    50% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
 }
 
 @keyframes loadingBtnError {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+    0%,100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
 
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
+    25%,75% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0);
+    }
 
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
-  }
+    50% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
 }
 
 .error-shown {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: loadingBtnError;
   animation-name: loadingBtnError;
 }
 
-.success {
+.spinner-button .success {
   margin-top: -7px;
   margin-bottom: -7px;
   font-size: 24px;
 }
 
-.btn-lg .success {
+.spinner-button.btn-lg .success {
   font-size: 26px;
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-.btn-sm .success {
+.spinner-button.btn-sm .success {
   font-size: 19px;
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-.btn-xs .success {
+.spinner-button.btn-xs .success {
   font-size: 14px;
   margin-top: -1px;
   margin-bottom: -2px;

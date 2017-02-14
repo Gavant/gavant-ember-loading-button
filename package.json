@@ -1,6 +1,6 @@
 {
   "name": "gavant-loading-button",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "description": "This is a button that calls a closure action which returns a promise. It keeps track of the loading state and shows a spinner until the promise resolves.",
   "directories": {
