@@ -109,7 +109,7 @@
   animation-name: loadingBtnFlipIn;
 }
 
-@-webkit-keyframes shake {
+@-webkit-keyframes loadingBtnError {
   from, to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
