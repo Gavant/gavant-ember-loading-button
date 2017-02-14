@@ -2,8 +2,10 @@ import Ember from 'ember';
 import layout from '../templates/components/loading-button';
 
 const {
+    on,
     get,
     set,
+    setProperties,
     computed,
     computed: { or },
     getWithDefault,
@@ -48,6 +50,14 @@ export default Component.extend(positionalParamsMixin, {
         const style = get(this, 'isSpinning') || get(this, 'successShown') || get(this, 'errorShown') ? `width:${width}px;` : "";
 
         return Ember.String.htmlSafe(style);
+    }),
+
+    onWillDestroyElement: on('willDestroyElement', function() {
+        setProperties(this, {
+            isSpinning: false,
+            successShown: false,
+            errorShown: false
+        });
     }),
 
     showResultState(type, animateInCallback) {

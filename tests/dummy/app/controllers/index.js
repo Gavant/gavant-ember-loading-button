@@ -15,7 +15,7 @@ export default Ember.Controller.extend({
             return new Ember.RSVP.Promise((resolve) => {
                 Ember.run.later(this, () => {
                     resolve(Ember.run.bind(this, 'onSuccessAnimateIn'));
-                }, 1000);
+                }, 2000);
             });
         },
 
@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
             return new Ember.RSVP.Promise((resolve, reject) => {
                 Ember.run.later(this, () => {
                     reject(Ember.run.bind(this, 'onErrorAnimateIn'));
-                }, 1000);
+                }, 2000);
             });
         },
 
