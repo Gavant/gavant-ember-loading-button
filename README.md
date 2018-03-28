@@ -1,6 +1,8 @@
-# Loading-button
+# gavant-ember-loading-button
 
-This README outlines the details of collaborating on this Ember addon.
+A button component that shows a spinner while waiting for the click action to resolve.
+
+**DISCLAIMER: This addon is not actively maintained for public use. Pull requests are welcome, but we do not guarantee  responses to bug submissions or feature requests, so use at your own risk.**
 
 ## Installation
 
