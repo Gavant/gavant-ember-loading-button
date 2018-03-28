@@ -1,8 +1,8 @@
 {
-  "name": "gavant-loading-button",
+  "name": "gavant-ember-loading-button",
   "version": "0.0.7",
   "private": false,
-  "description": "This is a button that calls a closure action which returns a promise. It keeps track of the loading state and shows a spinner until the promise resolves.",
+  "description": "A button component that shows a spinner while waiting for the click action to resolve",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -14,7 +14,7 @@
   },
   "repository": {
       "type": "git",
-      "url": "git@repo.gavant.com:ember-addon/loading-button.git"
+      "url": "https://github.com/Gavant/gavant-ember-loading-button.git"
   },
   "engines": {
     "node": ">= 0.10.0"
@@ -44,7 +44,10 @@
     "phantomjs": "1.9.18"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "loading",
+    "spinner",
+    "button"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.6",
@@ -52,8 +55,5 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  },
-  "publishConfig": {
-    "registry": "http://artifactory.gavant.com/artifactory/api/npm/npm-local"
   }
 }
