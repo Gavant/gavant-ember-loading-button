@@ -1,4 +1,6 @@
-# gavant-ember-loading-button
+# DEPRECATED: gavant-ember-loading-button
+
+**This project has been deprecated. Please use [gavant-ember-button-spinner](https://github.com/Gavant/gavant-ember-button-spinner) instead.**
 
 A button component that shows a spinner while waiting for the click action to resolve.
 
